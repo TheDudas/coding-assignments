@@ -130,6 +130,69 @@ function biggerThan100(bigNumbers) { // create function name and array
 // than the average of the elements in the second array.
 
 console.log("Question 11");
+// ///
+let numbers3 = [100, 100, 100]; // numbers in array
+let numbers4 = [10, 50, 75];
 
-// Question 11
+function twoAverages(arr1, arr2) {   // create function for two arrays, 
+  console.log("Parameters:", arr1, arr2); // add parameters of array
+  let sum1 = 0; // Initialize loop. 
+  let sum2 = 0;   
+
+  for (const number of arr1) { // create loop for each array
+    sum1 += number;
+    console.log("Current number loop1: ", number, "sum1: ", sum1);
+    }
+  
+  for (const number of arr2) { // for loop for array2
+    sum2 += number;
+    console.log("Current Number loop2: ", number, "Sum2: ", sum2);
+    }
+
+    let average1 = sum1 / arr1.length; // get average of arr1
+    let average2 = sum2 / arr2.length; // get average of arr2
+
+    console.log("Averages: ", average1, average2); // print averages and values.  
+
+  if (average1 > average2) {  // if statement to determine what to print if true, false or equal. 
+    console.log(true);
+    return true
+  }
+    else if (average1 < average2) {
+      console.log(false);
+      return false
+    } else {
+      console.log("Numbers are equal");
+    }
+  }
+    twoAverages(numbers3, numbers4); // values in function to start function
+// with current values it completes as true. 100 and 45. 
+
+// question 12.
+
+console.log("Question 12");
+// Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, 
+// and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
+
+function willBuyDrink(isHotOutside, moneyInPocket) {
+console.log("Parameters: ", isHotOutside, moneyInPocket);
+
+let buyDrink = isHotOutside === true && moneyInPocket > 10.5;
+console.log("Buy a drink?", buyDrink);
+return buyDrink;
+
+}
+
+willBuyDrink(true, 12)
+
+// Question: 13
+// Create a function on your own that solves a problem. In comments, write what that function does and why you created it. 
+
+function investmentDecision(returns, outOfPocket) {
+  console.log("Parameters: ", returns, outOfPocket); // A function to calculate if I should invest in a specific investment opportunity
+let investNow = returns >= .20 && outOfPocket <= 10000;  // uses values from another calculation, returns and outOfPocket to determine answer
+console.log("Invest in Opportunity?", investNow);      // If returns are = or greater than .20 or 20% and Less than a $10,000 cash investment then True. 
+return investmentDecision;  // return the decision based on the numbers entered. Should be pulled from another calculation of investment criteria.
+}
+investmentDecision(.22, 10000);  // this would return true. Less than .20 or more than 10000 would return false. 
 
